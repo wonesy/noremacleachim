@@ -1,7 +1,7 @@
 #!/bin/bash
 
-pushd ..
-docker build -t wonesy/noremacleachim:latestgit . || exit 0
+pushd ../deployment
+docker build -t wonesy/noremacleachim:latest . || exit 0
 
 if [[ $1 == "publish" ]]; then
     docker push wonesy/noremacleachim:latest
